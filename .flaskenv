@@ -1,2 +1,2 @@
-FLASK_APP=spotify_tracks.track_finder.py
+FLASK_APP=spotify_search.search.py
 FLASK_ENV=development
