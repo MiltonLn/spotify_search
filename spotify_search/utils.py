@@ -11,7 +11,7 @@ def parse_tracks(tracks_json):
             "name": track.get("name"),
             "artist": artists,
             "duration": track.get("duration_ms") / 60000,
-            "preview_url": track.get("preview_url")
+            "preview_url": track.get("preview_url"),
         })
     return parsed_tracks
 
@@ -28,8 +28,8 @@ def parse_albums(albums_json):
             "id": album.get("id"),
             "name": album.get("name"),
             "artist": artists,
-            "release_date": album.get("release_date")
-            "total_tracks": album.get("total_tracks")
+            "release_date": album.get("release_date"),
+            "total_tracks": album.get("total_tracks"),
         })
     return parsed_albums
 
@@ -43,6 +43,6 @@ def parse_artists(artists_json):
             "id": artist.get("id"),
             "name": artist.get("name"),
             "genres": artist.get("genres"),
-            "followers": artist.get("followers").get("total")
+            "followers": artist.get("followers").get("total"),
         })
     return parsed_artists

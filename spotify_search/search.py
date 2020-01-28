@@ -22,6 +22,7 @@ def search():
         search_type=search_type
     )
 
-    parse_method = import_module(f"spotify_search.utils.parse_{search_type}s")
+    utils_module = import_module("spotify_search.utils")
+    parse_method = getattr(utils_module, f"parse_{search_type}s")
     search_results = parse_method(json_response)
     return jsonify(search_results)
