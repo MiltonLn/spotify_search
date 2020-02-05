@@ -1,6 +1,6 @@
 def parse_tracks(tracks_json):
     parsed_tracks = []
-    tracks = tracks_json.get("tracks").get("items")
+    tracks = tracks_json.get("tracks").get("elements")
 
     for track in tracks:
         artists = ", ".join([
@@ -18,7 +18,7 @@ def parse_tracks(tracks_json):
 
 def parse_albums(albums_json):
     parsed_albums = []
-    albums = albums_json.get("albums").get("items")
+    albums = albums_json.get("albums").get("elements")
 
     for album in albums:
         artists = ", ".join([
@@ -36,7 +36,7 @@ def parse_albums(albums_json):
 
 def parse_artists(artists_json):
     parsed_artists = []
-    artists = artists_json.get("artists").get("items")
+    artists = artists_json.get("artists").get("elements")
 
     for artist in artists:
         parsed_artists.append({
